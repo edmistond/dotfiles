@@ -41,3 +41,4 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/edm
 
 alias lsh='ls -a | grep "^\."'
 alias cls=clear
+alias la='ls -al'
