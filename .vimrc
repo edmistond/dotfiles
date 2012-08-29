@@ -50,8 +50,8 @@ set colorcolumn=85
 au FocusLost * :wa
 
 " appearance options
-set background=light
-colorscheme solarized
+"set background=light
+colorscheme codeschool
 set guifont=Menlo:h12
 set guioptions-=T
 set showtabline=2

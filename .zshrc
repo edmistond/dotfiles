@@ -35,9 +35,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 # export PATH=usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/local/lib/node_modules
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/edmistond/.rvm/bin:/usr/local/lib/node_modules
+# export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/Users/edmistond/.rvm/bin:/usr/local/lib/node_modules
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
+# [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 alias lsh='ls -a | grep "^\."'
 alias cls=clear
