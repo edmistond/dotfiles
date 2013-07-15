@@ -11,10 +11,12 @@ Bundle 'Chiel92/vim-autoformat'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'c9s/bufexplorer'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'maksimr/vim-jsbeautify'
+"Bundle 'maksimr/vim-jsbeautify'
+Bundle 'edmistond/vim-jsbeautify'
 Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-bundler'
@@ -25,6 +27,8 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-rvm'
 Bundle 'tpope/vim-surround'
 Bundle 'tsaleh/vim-align'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'myusuf3/numbers.vim'
 
 " change leader from \ to ,
 let mapleader = ","
@@ -36,9 +40,9 @@ filetype plugin indent on
 set nocompatible
 set modelines=0
 
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set expandtab
 
 set noswapfile
@@ -121,3 +125,6 @@ imap <F3> <C-R>=strftime("%Y%m%d%H%M%S")<CR>
 cmap <F3> <C-R>=strftime("%Y%m%d%H%M%S")<CR>
 
 au FileType ruby AlignCtrl lP0
+
+map <leader>ay :AlignCtrl =p0P1
+map <leader>ar :AlignCtrl lp0P0
