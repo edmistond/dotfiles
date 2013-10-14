@@ -15,10 +15,11 @@ Bundle 'c9s/bufexplorer'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kien/ctrlp.vim'
 Bundle 'kien/rainbow_parentheses.vim'
-"Bundle 'maksimr/vim-jsbeautify'
-Bundle 'edmistond/vim-jsbeautify'
+Bundle 'maksimr/vim-jsbeautify'
+"Bundle 'edmistond/vim-jsbeautify'
 Bundle 'pangloss/vim-javascript'
 Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-markdown'
@@ -29,6 +30,8 @@ Bundle 'tpope/vim-surround'
 Bundle 'tsaleh/vim-align'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'myusuf3/numbers.vim'
+Bundle 'chriskempson/base16-vim'
+Bundle 'jgdavey/tslime.vim'
 
 " change leader from \ to ,
 let mapleader = ","
@@ -76,11 +79,11 @@ set textwidth=79
 set formatoptions=qrn1
 set colorcolumn=85
 
-
 " appearance options
 set background=dark
-colorscheme solarized
-set guifont=Source\ Code\ Pro:h12
+colorscheme base16-default
+"set guifont=Ubuntu\ Mono\ derivative\ Powerline:h13
+set guifont=Monaco\ for\ Powerline:h11
 set guioptions-=T
 set showtabline=2
 
@@ -111,8 +114,8 @@ nnoremap tc :tabclose<CR>
 " use 'jj' for <ESC>
 inoremap jj <ESC>
 
-" ctrl-l for hashrocks
-inoremap <C-L> => 
+" ctrl-l for hashrockets
+inoremap <C-L> <Space>=><Space>
 
 " type ,nt to toggle the nerdtree pane
 map <leader>nt :execute 'NERDTreeToggle ' . getcwd()<CR>
