@@ -32,6 +32,7 @@ Bundle 'Valloric/YouCompleteMe'
 Bundle 'myusuf3/numbers.vim'
 Bundle 'chriskempson/base16-vim'
 Bundle 'jgdavey/tslime.vim'
+Bundle 'sebastiangeiger/gitignore.vim'
 
 " change leader from \ to ,
 let mapleader = ","
@@ -43,9 +44,9 @@ filetype plugin indent on
 set nocompatible
 set modelines=0
 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 
 set noswapfile
@@ -81,9 +82,11 @@ set colorcolumn=85
 
 " appearance options
 set background=dark
-colorscheme base16-default
+colorscheme solarized
+"colorscheme base16-default
 "set guifont=Ubuntu\ Mono\ derivative\ Powerline:h13
-set guifont=Monaco\ for\ Powerline:h11
+"set guifont=Monaco\ for\ Powerline:h11
+set guifont=Menlo:h13
 set guioptions-=T
 set showtabline=2
 

@@ -1,6 +1,7 @@
 alias cls="clear"
 alias cd..="cd .."
 alias ll="ls -al"
+alias vim="/Applications/MacVim.app/Contents/MacOS/Vim"
 
 alias run_backup="/Users/edmistond/projects/backup_script/backup.py"
 
