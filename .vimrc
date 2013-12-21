@@ -82,7 +82,7 @@ set colorcolumn=85
 
 " appearance options
 set background=dark
-colorscheme solarized
+colorscheme base16-chalk
 "colorscheme base16-default
 "set guifont=Ubuntu\ Mono\ derivative\ Powerline:h13
 "set guifont=Monaco\ for\ Powerline:h11
