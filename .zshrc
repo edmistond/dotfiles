@@ -45,10 +45,18 @@ plugins=(git ruby rvm bundler gem)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:Applications/Postgres.app/Contents/MacOS/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"  # This loads RVM into a shell session.
 
-alias mvim='open -a macvim'
+case `uname` in
+    Darwin)
+        export PATH=$PATH:Applications/Postgres.app/Contents/MacOS/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+        alias mvim='open -a macvim'
+        ;;
+    Linux)
+        export PATH="usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+        ;;
+esac
+
 alias gs='git status'
 alias ggd='git lg'
