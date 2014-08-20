@@ -11,7 +11,7 @@ Bundle 'gmarik/vundle'
 Bundle 'Chiel92/vim-autoformat'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'bling/vim-airline'
-Bundle 'Valloric/YouCompleteMe'
+" Bundle 'Valloric/YouCompleteMe'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'c9s/bufexplorer'
 Bundle 'chriskempson/base16-vim'
@@ -25,7 +25,6 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/syntastic.git'
 Bundle 'sebastiangeiger/gitignore.vim'
 Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-bundler'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-fugitive'
@@ -36,6 +35,7 @@ Bundle 'tpope/vim-rvm'
 Bundle 'tpope/vim-surround'
 Bundle 'tsaleh/vim-align'
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'jnwhiteh/vim-golang'
 
 " change leader from \ to ,
 let mapleader = ","
@@ -101,10 +101,11 @@ set colorcolumn=85
 
 " appearance options
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 
 if has("gui_macvim")
-  colorscheme base16-ocean
+  colorscheme base16-default
+  "set guifont=M+_1m:h14
   set guifont=Ubuntu\ Mono\ derivative\ Powerline:h14
 endif
 
@@ -187,6 +188,8 @@ if has("gui_macvim")
 else
   let g:airline_powerline_fonts = 0
 endif
+              
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
 set wildignore+=*/_site/*
 set wildignore+=*/.idea/*
