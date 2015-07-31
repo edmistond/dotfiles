@@ -1,41 +1,44 @@
 " friendly reminder - :source $MYVIMRC to reload w/o restarting vim
 
 " Vundle stuff!
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
 " set up the bundles to use... starting w/ letting Vundle self-manage
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
 " install a bunch of bundles
-Bundle 'Chiel92/vim-autoformat'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'bling/vim-airline'
-" Bundle 'Valloric/YouCompleteMe'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'c9s/bufexplorer'
-Bundle 'chriskempson/base16-vim'
-Bundle 'jgdavey/tslime.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'kien/ctrlp.vim'
-Bundle 'kien/rainbow_parentheses.vim'
-Bundle 'maksimr/vim-jsbeautify'
-Bundle 'pangloss/vim-javascript'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/syntastic.git'
-Bundle 'sebastiangeiger/gitignore.vim'
-Bundle 'tpope/vim-bundler'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-markdown'
-Bundle 'tpope/vim-ragtag'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-rvm'
-Bundle 'tpope/vim-surround'
-Bundle 'tsaleh/vim-align'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'jnwhiteh/vim-golang'
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'bling/vim-airline'
+Plugin 'c9s/bufexplorer'
+Plugin 'chriskempson/base16-vim'
+Plugin 'elzr/vim-json'
+Plugin 'jgdavey/tslime.vim'
+Plugin 'jnwhiteh/vim-golang'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'kien/ctrlp.vim'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'maksimr/vim-jsbeautify'
+Plugin 'marijnh/tern_for_vim'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/syntastic.git'
+Plugin 'sebastiangeiger/gitignore.vim'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-ragtag'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rvm'
+Plugin 'tpope/vim-surround'
+Plugin 'tsaleh/vim-align'
+Plugin 'vim-ruby/vim-ruby'
 
 " change leader from \ to ,
 let mapleader = ","
@@ -43,6 +46,9 @@ let g:mapleader = ","
 
 " get ctrl-p to show hidden files
 let g:ctrlp_show_hidden = 1
+
+" use nerdtree as a split explorer instead
+let NERDTreeHijackNetrw=1
 
 syntax enable
 filetype off
@@ -101,12 +107,11 @@ set colorcolumn=85
 
 " appearance options
 set background=dark
-"colorscheme solarized
 
 if has("gui_macvim")
-  colorscheme base16-default
-  "set guifont=M+_1m:h14
-  set guifont=Ubuntu\ Mono\ derivative\ Powerline:h14
+  "colorscheme base16-default
+  colorscheme jellybeans
+  set guifont=Menlo:h12
 endif
 
 "set guifont=Source\ Code\ Pro:h12
@@ -183,13 +188,15 @@ map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Allow pretty powerline fonts, but only if we're in macvim
-if has("gui_macvim")
-  let g:airline_powerline_fonts = 1
-else
-  let g:airline_powerline_fonts = 0
-endif
+"if has("gui_macvim")
+"  let g:airline_powerline_fonts = 1
+"else
+"  let g:airline_powerline_fonts = 0
+"endif
               
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 
 set wildignore+=*/_site/*
 set wildignore+=*/.idea/*
+
+let g:syntastic_ruby_checkers = ['mri', 'rubocop']
