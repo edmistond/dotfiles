@@ -1,6 +1,9 @@
 [user]
 	name = David Edmiston
 	email = edmistond@gmail.com
+[alias]
+    lg = log --color --graph --decorate --pretty=format:'%C(bold cyan)%h%Creset -%C(bold red)%d%Creset %s %C(bold green)(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    wtf = log --pretty=format:"%C(auto,yellow)%h%C(auto)%d%C(auto,reset)\\ by\\ %C(auto,blue)%cn%C(auto,reset),\\ %C(auto,cyan)%ar%C(auto,reset)%n\\ %s%n" --stat
 [core]
 	excludesfile = /Users/edmistond/.gitignore_global
 	editor = mate -w
